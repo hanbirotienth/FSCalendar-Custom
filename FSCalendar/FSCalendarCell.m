@@ -95,31 +95,31 @@
     self.contentView.clipsToBounds = NO;
     
 }
+//text: white black red
+// background blue green black orange red
 
 - (UIColor *)getColorTopBackgroundTitle:(NSString *)colorStr {
     UIColor *color = UIColor.blackColor;
     if([colorStr isEqualToString:@"black"]) {
         color = UIColor.blackColor;
     } else if([colorStr isEqualToString:@"orange"]) {
-        color = UIColor.orangeColor;
+        color = [UIColor colorWithRed:255/255.0f green:153/255.0f blue:0 alpha:1.0]; // 255, 153, 0
     } else if([colorStr isEqualToString:@"red"]) {
-        color = UIColor.redColor;
-    } else if([colorStr isEqualToString:@"yellow"]) {
-        color = UIColor.yellowColor;
+        color = [UIColor colorWithRed:244/255.0f green:67/255.0f blue:54/255.0f alpha:1.0]; // 244, 67, 54
+    } else if([colorStr isEqualToString:@"green"]) {
+        color = [UIColor colorWithRed:204/255.0f green:220/255.0f blue:57/255.0f alpha:1.0]; // 204, 220, 57
     } else if([colorStr isEqualToString:@"blue"]) {
-        color = UIColor.blueColor;
+        color = [UIColor colorWithRed:25/255.0f green:115/255.0f blue:232/255.0f alpha:1.0];// 25, 115, 232
     }
     return self.placeholder ? [color colorWithAlphaComponent:0.5] : color;
 }
 
 - (UIColor *)getColorTopTitleColor:(NSString *)colorStr {
-    UIColor *color = UIColor.whiteColor;
-    if([colorStr isEqualToString:@"brown"]) {
-        color = UIColor.brownColor;
+    UIColor *color = UIColor.blackColor;
+    if([colorStr isEqualToString:@"red"]) {
+        color = UIColor.redColor;
     } else if([colorStr isEqualToString:@"white"]) {
         color = UIColor.whiteColor;
-    } else if([colorStr isEqualToString:@"black"]) {
-        color = UIColor.blackColor;
     }
     return self.placeholder ? [color colorWithAlphaComponent:0.5] : color;
 }
